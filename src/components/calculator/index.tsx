@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Buttons } from '../buttons';
 import { Header } from '../header';
+import "./style.css"
 
 export interface IState {
     calculator: {
