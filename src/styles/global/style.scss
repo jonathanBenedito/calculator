@@ -1,0 +1,12 @@
+@import '../variables';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: url($body-background-url) center center no-repeat;
+    background-clip: cover;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}

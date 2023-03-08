@@ -1,15 +1,13 @@
-interface IHeaderProps {
-    input: string
-}
+import "./style.css"
 
-export const Header: React.FC<IHeaderProps> = ({ input }) => {
+export const Header: React.FC = () => {
     return (
-        <header>
+        <header className="calculator-header">
             <section className="calculator-brand">
-                <h1 className="brand">SOLIDER</h1>
-                <p className="calculator-text">CALCULATOR</p>
+                <h1 className="model">KK-403</h1>
+                <p className="object">DIGITAL CALCULATOR</p>
             </section>
-            <input type="text" value={input} />
+            <img src={'images/solar-panel.png'} alt={'solar-panel'} />
         </header>
     )
 }

@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+
+    button {
+        width: 43px;
+        height: 39px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        color: $font-color;
+        background-color: $button-black-color;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: $button-black-hover-color;
+        }
+
+        &:active {
+            background-color: $button-black-active-color;
+        }
+    }
+
+    .clear-button {
+        border-radius: 100%;
+        grid-row-start: 1;
+        grid-column: 1 / span 4;
+        width: 43px;
+        height: 43px;
+    }
+
+    .blue {
+        background-color: $button-blue-color;
+
+        &:hover {
+            background-color: $button-blue-hover-color;
+        }
+
+        &:active {
+            background-color: $button-blue-active-color;
+        }
+    }
+}
+

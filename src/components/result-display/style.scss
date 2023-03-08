@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.result-display {
+    background-color: $result-display-background-color;
+    outline: 0.5rem solid $result-display-border-color;
+    border-radius: 0.5rem;
+    padding: 1.3rem 1.5rem 1rem 1.5rem;
+    position: relative;
+    box-shadow: 3px 4px 10px $result-display-drop-shadow-color;
+    margin-bottom: 3.3rem;
+    width: 100%;
+
+    input {
+        width: 100%;
+        background-color: $result-display-background-color;
+        text-align: right;
+        border: none;
+        outline: none;
+        color: $result-display-font-color;
+        cursor: default;
+    }
+
+    .formula-input {
+        font-size: 1.2rem;   
+        padding-bottom: 0.3rem;
+    }
+
+    .result-input {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+}

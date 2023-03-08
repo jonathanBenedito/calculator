@@ -1,3 +1,14 @@
-.calculator {
+.main-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content .calculator {
   background-color: #22252D;
+  color: white;
+  width: 253px;
+  padding: 2rem;
+  border-radius: 3rem;
 }/*# sourceMappingURL=style.css.map */

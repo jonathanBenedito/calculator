@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Buttons } from '../buttons';
 import { Header } from '../header';
+import { ResultDisplay } from '../result-display';
 import "./style.css"
 
 export interface IState {
@@ -18,11 +19,13 @@ const Calculator: React.FC = () => {
     })
 
     return (
-        <main className="calculator">
+        <main className="main-content">
 
-            <Header input={calculator.input} />
-            <input type="text" value={calculator.result} />      
-            <Buttons {...{calculator, setCalculator}} />
+            <article className="calculator">
+                <Header />
+                <ResultDisplay input={calculator.input} result={calculator.result} />
+                <Buttons {...{ calculator, setCalculator }} />
+            </article>
 
         </main>
     );

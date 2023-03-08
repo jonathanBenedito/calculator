@@ -1,0 +1,40 @@
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+}
+.buttons button {
+  width: 43px;
+  height: 39px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #2A2D37;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.buttons button:hover {
+  background-color: #55575F;
+}
+.buttons button:active {
+  background-color: #22242C;
+}
+.buttons .clear-button {
+  border-radius: 100%;
+  grid-row-start: 1;
+  grid-column: 1/span 4;
+  width: 43px;
+  height: 43px;
+}
+.buttons .blue {
+  background-color: #5D8FDC;
+}
+.buttons .blue:hover {
+  background-color: #7DA5E3;
+}
+.buttons .blue:active {
+  background-color: #4A72B0;
+}/*# sourceMappingURL=style.css.map */

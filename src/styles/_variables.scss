@@ -1,14 +1,14 @@
 // Background image variables
-$body-background-url: "/images/background.png";
+$body-background-url: '/public/images/background.png';
 
 // Calculator color variables
 $calculator-background-color: #22252D;
-$calculator-drop-shadow-color: rgba(0, 0, 0, 0.25);
 
-// Result visor color variables
-$result-visor-background-color: #88A273;
-$result-visor-font-color: #1C2610;
-$result-visor-drop-shadow-color: rgba(0, 0, 0, 0.25);
+// Result display color variables
+$result-display-background-color: #88A273;
+$result-display-font-color: #1C2610;
+$result-display-drop-shadow-color: rgba(0, 0, 0, 0.75);
+$result-display-border-color: #1C1F27;
 
 // Font color variables
 $font-color: white;

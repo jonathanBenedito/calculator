@@ -1,0 +1,15 @@
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.calculator-header .calculator-brand {
+  text-align: center;
+}
+.calculator-header .calculator-brand .model {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.calculator-header .calculator-brand .object {
+  font-size: 1rem;
+}/*# sourceMappingURL=style.css.map */
