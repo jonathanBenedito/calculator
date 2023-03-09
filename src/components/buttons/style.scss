@@ -25,6 +25,11 @@
         &:active {
             background-color: $button-black-active-color;
         }
+
+        &:disabled {
+            color: $button-black-disabled-color;
+            background-color: $button-black-disabled-color;
+        }
     }
 
     .clear-button {

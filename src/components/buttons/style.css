@@ -22,6 +22,10 @@
 .buttons button:active {
   background-color: #22242C;
 }
+.buttons button:disabled {
+  color: #22252D;
+  background-color: #22252D;
+}
 .buttons .clear-button {
   border-radius: 100%;
   grid-row-start: 1;
