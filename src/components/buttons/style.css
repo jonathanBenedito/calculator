@@ -22,16 +22,17 @@
 .buttons button:active {
   background-color: #22242C;
 }
-.buttons button:disabled {
-  color: #22252D;
-  background-color: #22252D;
+.buttons button:nth-child(2) {
+  grid-row-start: 1;
+  grid-column: 3/span 2;
+  width: 100%;
 }
 .buttons .clear-button {
   border-radius: 100%;
-  grid-row-start: 1;
-  grid-column: 1/span 4;
   width: 43px;
   height: 43px;
+  grid-row-start: 1;
+  grid-column: 1/span 3;
 }
 .buttons .blue {
   background-color: #5D8FDC;
@@ -41,4 +42,8 @@
 }
 .buttons .blue:active {
   background-color: #4A72B0;
+}
+.buttons .blue:disabled {
+  color: #22252D;
+  background-color: #22252D;
 }/*# sourceMappingURL=style.css.map */

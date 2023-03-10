@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+<h1 align="center">
+  KK-403 DIGITAL CALCULATOR
+</h1>
+<p align="center">
+    Este é um <a href="https://calculator-mu-murex.vercel.app/" target="_blank">web app</a> de uma simples calculadora inspirada no modelo KK-402.
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![demo](public/images/desktop-layout.png)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 💬 Sobre o projeto
+O projeto foi criado com o simples propósito de exercitar meus conhecimentos de TypeScript e SASS. A calculadora pode efetuar 4 operações básicas de matemática:
+-   Adição
+-   Subtração
+-   Multiplicação
+-   Divisão
 
-### `npm start`
+O usuário pode digitar os números através dos botões, apagar dígitos e transformar números em decimais.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🧱 Tecnologias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React JS
+- TypeScript
+- SASS
+- Jest
+- Testing Library
 
-### `npm test`
+## 🛠 Guia de instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Faça o clone do projeto
+    ```
+    git clone https://github.com/jonathanBenedito/calculator.git
+    ```
 
-### `npm run build`
+2. Acesse o repositório
+    ```
+    cd calculator
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Instale o pacote do projeto
+    ```
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Inicialize o app
+    ```
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔗 Links
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Website: <a href="https://calculator-mu-murex.vercel.app/">react-intro-sign-up-form.vercel.app</a><br />

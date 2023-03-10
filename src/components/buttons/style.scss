@@ -26,18 +26,19 @@
             background-color: $button-black-active-color;
         }
 
-        &:disabled {
-            color: $button-black-disabled-color;
-            background-color: $button-black-disabled-color;
+        &:nth-child(2) {
+            grid-row-start: 1;
+            grid-column: 3 / span 2;
+            width: 100%;
         }
     }
 
     .clear-button {
         border-radius: 100%;
-        grid-row-start: 1;
-        grid-column: 1 / span 4;
         width: 43px;
         height: 43px;
+        grid-row-start: 1;
+        grid-column: 1 / span 3;
     }
 
     .blue {
@@ -49,6 +50,11 @@
 
         &:active {
             background-color: $button-blue-active-color;
+        }
+
+        &:disabled {
+            color: $button-black-disabled-color;
+            background-color: $button-black-disabled-color;
         }
     }
 }

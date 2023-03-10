@@ -14,17 +14,17 @@ export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) =
         const input = calculator.input;
         const result = calculator.result;
 
-        if (result !== 0) {
+        if (result !== 0 && num.toString().match(/[\+\/*\-\.]/)) {
             setCalculator({
                 ...calculator,
                 input: result.toString() + num,
                 result: 0
             });
             return 
-        } else if (num.toString().match(/[+\-*/]/) && input === "") {
+        } else if (num.toString().match(/[\+\/*\-\.]/) && input === "") {
             return
         }
-        setCalculator({ ...calculator, input: input + num });
+        setCalculator({ ...calculator, input: input + num, result: 0 });
     };
 
     const handleClearClick = (): void => {
@@ -40,16 +40,19 @@ export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) =
         })
     }
 
-    const inputStartsWithOperator = (input: string) => {
+    const inputStartsWithOperator = (input: string):boolean => {
         const firstChar = input.charAt(0)
         return firstChar === '+' || firstChar === '-' || firstChar === '*' || firstChar === '/';
     }
 
-    const inputEndsWithOperator = (input: string) => {
+    const inputEndsWithOperator = (input: string):boolean => {
         const lastChar = input.charAt(input.length - 1)
         return lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/';
     }
 
+    function backspace():void {
+        setCalculator({ ...calculator, input: calculator.input.slice(0, -1) });
+    }
     const [equalIsDisabled, setEqualIsDisabled] = useState<boolean>(false)
 
     useEffect(() => {
@@ -60,6 +63,7 @@ export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) =
     return (
         <section className="buttons">
             <button className="clear-button blue" onClick={() => handleClearClick()}>C</button>
+            <button onClick={() => backspace()}>&#8592;</button>
 
             <button onClick={() => handleNumClick(7)}>7</button>
             <button onClick={() => handleNumClick(8)}>8</button>
@@ -78,13 +82,14 @@ export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) =
 
             <button onClick={() => handleNumClick(0)}>0</button>
             <button onClick={() => handleNumClick(".")}>.</button>
-            <button onClick={() => handleEqualClick()} disabled={equalIsDisabled}>=</button>
-            <button
+            <button 
+                onClick={() => handleEqualClick()}
+                disabled={equalIsDisabled}
                 className="blue"
-                onClick={() => handleNumClick("+")}
             >
-                +
+                =
             </button>
+            <button onClick={() => handleNumClick("+")}>+</button>
         </section>
     )
 }
