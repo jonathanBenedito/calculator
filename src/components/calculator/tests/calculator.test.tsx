@@ -47,7 +47,7 @@ describe('Buttons component', () => {
         const button_plus = screen.getByRole('button', { name: '+' });
         fireEvent.click(button_plus);
 
-        expect(setCalculator).not.toHaveBeenCalled();
+        expect(setCalculator).toHaveBeenCalledWith({ result: 0, input: '' });
     })
 
     test('When the clear button is clicked, the input field of the calculator should be cleared', () => {

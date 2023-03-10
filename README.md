@@ -54,4 +54,4 @@ O usuário pode digitar os números através dos botões, apagar dígitos e tran
 
 ### 🔗 Links
 
-Website: <a href="https://calculator-mu-murex.vercel.app/">react-intro-sign-up-form.vercel.app</a><br />
+Website: <a href="https://calculator-mu-murex.vercel.app/">KK-403 Digital Calculator</a><br />

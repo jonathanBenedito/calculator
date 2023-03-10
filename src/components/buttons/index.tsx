@@ -11,28 +11,31 @@ interface IButtonProps {
 export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) => {
 
     const handleNumClick = (num: number | string): void => {
-        const input = calculator.input;
-        const result = calculator.result;
+        const { input, result } = calculator
 
-        if (result !== 0 && num.toString().match(/[\+\/*\-\.]/)) {
+        if (result !== 0 && checkOperator(num.toString())) {
             setCalculator({
                 ...calculator,
                 input: result.toString() + num,
                 result: 0
-            });
+            })
             return 
-        } else if (num.toString().match(/[\+\/*\-\.]/) && input === "") {
-            return
         }
-        setCalculator({ ...calculator, input: input + num, result: 0 });
-    };
+        
+        num = checkOperator(num.toString()) && input === "" ? "" : num
+        setCalculator({ ...calculator, input: input + num, result: 0 })
+    }
+
+    const checkOperator = (value: string):RegExpMatchArray | null => {
+        return value.match(/[+/*\-.]/)
+    }
 
     const handleClearClick = (): void => {
         setCalculator({ result: 0, input: "" })
     }
 
     const handleEqualClick = (): void => {
-        const res = evaluate(calculator.input);
+        const res = evaluate(calculator.input)
 
         setCalculator({
             input: '',
@@ -42,16 +45,16 @@ export const Buttons: React.FC<IButtonProps> = ({ calculator, setCalculator }) =
 
     const inputStartsWithOperator = (input: string):boolean => {
         const firstChar = input.charAt(0)
-        return firstChar === '+' || firstChar === '-' || firstChar === '*' || firstChar === '/';
+        return firstChar === '+' || firstChar === '-' || firstChar === '*' || firstChar === '/'
     }
 
     const inputEndsWithOperator = (input: string):boolean => {
         const lastChar = input.charAt(input.length - 1)
-        return lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/';
+        return lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/'
     }
 
     function backspace():void {
-        setCalculator({ ...calculator, input: calculator.input.slice(0, -1) });
+        setCalculator({ ...calculator, input: calculator.input.slice(0, -1) })
     }
     const [equalIsDisabled, setEqualIsDisabled] = useState<boolean>(false)
 
